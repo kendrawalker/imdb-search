@@ -1,0 +1,38 @@
+<!-- imdb search -->
+
+<!doctype html>
+<html>
+
+<head>
+    <title>IMDB Search</title>
+    <link rel="stylesheet" href="imdb_search_stylesheet.css" />
+</head>
+
+<body>
+    <h1>Movie Search</h1>
+    <div id="search">
+      <textarea id ="text-input">Enter Title Here</textarea>
+      <button id="search-button">🎥Click Here</button>
+    </div>
+    <div id="search-results">
+        <div id="results-displayed-msg"></div>
+        <div id="results"></div>
+    </div>
+    <div id="more-button">
+      <div id="more"></div>
+    </div>
+    <script id="moviedata" type="text/handlebars">
+        <img class="pic" src={{Poster}}>
+        <div class="movie">
+            <h2>{{Title}}</h2>
+            <p class="actors">starring..<strong>{{Actors}}</strong>..</p>
+            <p>directed by <strong>{{Director}}</strong> and released <strong>{{Released}}</strong></p>
+            <p id="awards">Honors: <strong>{{Awards}}</strong></p>
+        </div>
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="imdb_search_jscript.js"></script>
+</body>
+
+</html>
